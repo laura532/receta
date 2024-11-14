@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarta de Manzana </title>
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            margin: 30px;
+            padding: 20px;
+            background-color: #a3740d;
+        }
+        h1 {
+            color: #042303;
+        }
+        h2 {
+            color: #4ddf18;
+            cursor: pointer;
+        }
+        .content {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #0740c5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Receta de Tarta de Manzana</h1>
+    <img src="tarta de manzana.jpg" alt="Tarta de Manzana">
+
+    <h2 onclick="toggleContent('ingredientes')">Ingredientes</h2>
+    <div id="ingredientes" class="content">
+        <ul>
+            <li>4 manzanas</li>
+            <li>200 g azucar</li>
+            <li>250 g de harina</li>
+            <li>100 g de mantequilla</li>
+            <li>2 huevos</li>
+            <li>1 cucharadita de canela</li>
+            <li>1 cucharadita de polvo de hornear</li>
+        </ul>
+    </div>
+
+    <h2 onclick="toggleContent('instrucciones')">Instrucciones</h2>
+    <div id="instrucciones" class="content">
+        <ol>
+            <li>Precalentar el horno a 180°c</li>
+            <li>Pelar y cortar las manzanas en trozos</li>
+            <li>En un bol, mezclar la harina, el azucar, el polvo de hornear y la canela</li>
+
+            <li>Agregar la mantequilla derretida y los huevos. Mezclar bien.</li>
+            <li>Incorporar las manzanas a la mezcla</li>
+            <li>Verter la mezcla en un molde enmantecado y hornear durante 45 minutos.</li>
+            <li>Dejar enfriar antes de servir</li>
+        </ol>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display ==="") {
+                content.style.display = "block";
+            } else {
+                content.style.display ="none";
+            }
+        }
+    </script>
+</body>
+</html>
